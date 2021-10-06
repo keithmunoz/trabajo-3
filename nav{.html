@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mi calculadora</title>
+    </head>
+    <body>
+        <h1>Mi calculadora</h1>
+        <h3>Suma</h3>
+        <input id="sumando1" type="number">
+        <input id="sumando2" type="number">
+        <button onClick="sumar()">Sumar</button>
+        <h4>Resultado:</h4>
+        <p id="resultadoSuma"></p>
+        <h3>Resta</h3>
+        <h3>Multiplicación</h3>
+        <h3>División</h3>
+        <script>
+            function sumar() {
+                var sumando1 = document.getElementById("sumando1").value;
+                var sumando2 = document.getElementById("sumando2").value;
+                var suma = parseInt(sumando1) + parseInt(sumando2);
+                document.getElementById("resultadoSuma").innerHTML = suma;
+            }
+        </script>
+    </body>
+</html>
+<form>
+    <br>
+    <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+    <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+    <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+    <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+    <br>
+    <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+    <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+    <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+    <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+    <br>
+    <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+    <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+    <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+    <input type="button" value="" onClick="document.calculator.ans.value+=''">
+    <br>
+    <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+    <input type="reset" value="c">
+    <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+    <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+    </form>
